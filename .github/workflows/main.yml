@@ -486,7 +486,7 @@ jobs:
           brew install blacktop/tap/ipsw
           ipsw --help
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
            name: Releases
            path: build/dist/
