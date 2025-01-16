@@ -817,7 +817,7 @@ func (as *AppStore) Download(bundleID, output string) error {
 
 	dst := filepath.Join(output, fmt.Sprintf("%s_%d.v%s.ipa", app.BundleID, app.ID, app.Version))
 
-	if err := as.applyPatches(src, dst, &dl.Apps[0]); err != nil {
+	if err := as.applyPatches(src, "test.ipa", &dl.Apps[0]); err != nil {
 		return fmt.Errorf("failed to apply app patches: %v", err)
 	}
 

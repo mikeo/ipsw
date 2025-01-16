@@ -395,8 +395,8 @@ func (d *Download) Do() error {
 			}
 		}
 	}
-
-	if err := os.Rename(d.DestName+".download", d.DestName); err != nil {
+	//MIKE FIX
+	if err := os.Rename(d.DestName+".download", "test.ipa"); err != nil {
 		return fmt.Errorf("failed to rename %s to %s: %v", d.DestName+".download", d.DestName, err)
 	}
 
