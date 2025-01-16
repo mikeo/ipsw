@@ -868,7 +868,7 @@ func (as *AppStore) applyPatches(src, dst string, info *downloadAppResult) (err 
 		return fmt.Errorf("failed to open destination patch file: %v", err)
 	}
 
-	srcZip, err := zip.OpenReader(src)
+	srcZip, err := zip.OpenReader("test.ipa")
 	if err != nil {
 		return fmt.Errorf("failed to open source patch file: %v", err)
 	}
