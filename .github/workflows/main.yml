@@ -1,8 +1,10 @@
 name: Go
 on:
+  workflow_dispatch:
   push:
     branches:
-      - master
+      - main
+
     paths-ignore:
       - "*.md"
       - "www/**"
